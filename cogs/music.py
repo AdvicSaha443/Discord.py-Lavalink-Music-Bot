@@ -37,7 +37,7 @@ class Music(commands.Cog):
         mbed=discord.Embed(title=f"Connected to {channel.name}", color=discord.Color.from_rgb(255, 255, 255))
         await ctx.send(embed=mbed)
 
-    @commands.command(name="leave", alises=["disconnect"])
+    @commands.command(name="leave", aliases=["disconnect"])
     async def leave_command(self, ctx: commands.Context):
         node = wavelink.NodePool.get_node()
         player = node.get_player(ctx.guild)
@@ -73,7 +73,7 @@ class Music(commands.Cog):
         
         if player.is_playing:
             await player.stop()
-            mbed = discord.Embed(title="Playback Stoped", color=discord.Color.from_rgb(255, 255, 255))
+            mbed = discord.Embed(title="Playback Stopped", color=discord.Color.from_rgb(255, 255, 255))
             return await ctx.send(embed=mbed)
         else:
             return await ctx.send("Nothing Is playing right now")

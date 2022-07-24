@@ -37,7 +37,7 @@ class Music(commands.Cog):
         mbed=discord.Embed(title=f"Connected to {channel.name}", color=discord.Color.from_rgb(255, 255, 255))
         await ctx.send(embed=mbed)
 
-    @commands.command(name="leave", alises=["disconnect"])
+    @commands.command(name="leave", aliases=["disconnect"])
     async def leave_command(self, ctx: commands.Context):
         node = wavelink.NodePool.get_node()
         player = node.get_player(ctx.guild)

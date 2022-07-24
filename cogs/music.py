@@ -73,7 +73,7 @@ class Music(commands.Cog):
         
         if player.is_playing:
             await player.stop()
-            mbed = discord.Embed(title="Playback Stoped", color=discord.Color.from_rgb(255, 255, 255))
+            mbed = discord.Embed(title="Playback Stopped", color=discord.Color.from_rgb(255, 255, 255))
             return await ctx.send(embed=mbed)
         else:
             return await ctx.send("Nothing Is playing right now")
